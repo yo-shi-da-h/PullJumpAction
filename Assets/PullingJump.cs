@@ -11,11 +11,11 @@ public class PullingJump : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Õ“Ë‚µ‚½");
+        //Debug.Log("Õ“Ë‚µ‚½");
     }
     private void OnCollisionStay(Collision collision)
     {
-        Debug.Log("ÚG’†");
+        //Debug.Log("ÚG’†");
         isCanJump = true;
     }
     private void OnCollisionExit(Collision collision)
