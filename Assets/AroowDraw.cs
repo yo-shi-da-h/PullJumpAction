@@ -35,7 +35,7 @@ public class AroowDraw : MonoBehaviour
                 = Quaternion.Euler(0, 0, angleRad * Mathf.Rad2Deg);
 
             arrowImage.rectTransform.sizeDelta = new Vector2(size, size);
-            Debug.Log(dist);
+            //Debug.Log(dist);
         }
     }
 }
