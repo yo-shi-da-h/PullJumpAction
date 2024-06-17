@@ -19,6 +19,7 @@ public class AroowDraw : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            arrowImage.gameObject.SetActive(true);
             clickPosition = Input.mousePosition;
         }
         if (Input.GetMouseButton(0))
@@ -35,6 +36,8 @@ public class AroowDraw : MonoBehaviour
                 = Quaternion.Euler(0, 0, angleRad * Mathf.Rad2Deg);
 
             arrowImage.rectTransform.sizeDelta = new Vector2(size, size);
+
+           
             //Debug.Log(dist);
         }
     }

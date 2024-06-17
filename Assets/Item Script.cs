@@ -5,17 +5,34 @@ using UnityEngine;
 
 public class ItemScript : MonoBehaviour
 {
-    public GameObject ItemPrefab;
+    //public GameObject ItemPrefab;
+    private Animator animator;
+    private AudioSource audioSource;
 
-    private void DestroySelf()
+    // Start is called before the first frame update
+    void Start()
     {
-        Destroy(gameObject);
+        animator = GetComponent<Animator>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Enter");
-        DestroySelf();
+        //DestroySelf();
+        animator.SetTrigger("Get");
+        audioSource.Play();
     }
+    // Update is called once per frame
+    void Update()
+    {
+        //animator.SetTrigger("Get");
+
+    }
+    private void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+    
 
     private void OnTriggerStay(Collider other)
     {
@@ -26,15 +43,5 @@ public class ItemScript : MonoBehaviour
     {
         //Debug.Log("Exit");
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
